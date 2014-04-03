@@ -71,6 +71,10 @@
     [self checkWithAnimation:NO];
 }
 
+- (void)createCheckbox {
+    
+}
+
 - (void)createLabel {
     CGRect labelRect = [self.labelText boundingRectWithSize:CGSizeMake(self.settings.maximumWidthOfLabel, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.settings.labelFont} context:nil];
     
@@ -117,6 +121,13 @@
     _checked = checked;
     [self checkWithAnimation:YES];
     [self.delegate checkBox:self didCheck:_checked];
+    
+}
+
+- (void)setPosition:(CGPoint)position {
+    
+    _position = position;
+    self.frame = CGRectMake(position.x, position.y, self.frame.size.width, self.frame.size.height);
     
 }
 

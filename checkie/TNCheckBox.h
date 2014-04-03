@@ -24,6 +24,7 @@
 @property (nonatomic, strong) UIView *checkBox;
 @property (nonatomic, strong) UILabel *lblLabel;
 @property (nonatomic, strong) UIButton *btnHidden;
+@property (nonatomic) CGPoint position;
 
 + (instancetype)checkBoxWithLabel:(NSString *)label tag:(NSUInteger)tag settings:(NSDictionary *)settings;
 - (instancetype)initWithLabel:(NSString *)label tag:(NSUInteger)tag settings:(NSDictionary *)settings;

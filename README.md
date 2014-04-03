@@ -32,7 +32,7 @@ Initialize the class with its initializer and fill in all the arguments or use a
 
 Set the delegate ``` TNCheckBoxDelegate ``` if you want to be notified when the checkbox is or will be selected.
 
-Add it to the view.
+Add it to the view. You can use the ``` position ``` property to easily position the view.
 
 Done!
 
