@@ -1,11 +1,9 @@
 # xcode noise
 build/*
 *.pbxuser
-*.mode1v3
 *.xcworkspace
 xcuserdata
-project.xcworkspace/*
-xcuserdata/*
+CheckdieDemo/xcuserdata/*
 
 # osx noise
 .DS_Store
