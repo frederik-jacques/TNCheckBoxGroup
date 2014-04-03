@@ -3,8 +3,10 @@ build/*
 *.pbxuser
 *.xcworkspace
 xcuserdata
-CheckdieDemo/xcuserdata/*
+CheckieDemo/xcuserdata/*
 
 # osx noise
+/.DS_Store
+/CheckieDemo/.DS_Store
+
 .DS_Store
-CheckdieDemo/.DS_Store

@@ -1,8 +1,8 @@
-Checkbox for Objective-C
+Custom checkboxes for Objective-C
 =========================
 
-U can use the TNCheckBox class to use some pre-built checkboxes, or you can extend it really easy to suit your own design.
-Every checkbox has a checked animation.  When the text is longer then the available space, it will automatically wrap the text over multiple lines.
+U can use the TNCheckBoxGroup class to use some pre-built checkboxes, or you can extend it really easy to suit your own design.
+Every checkbox has a selected animation.  When the text is longer then the available space, it will automatically wrap the text over multiple lines.
 
 The current version supports 3 different checkboxes:
 
@@ -12,193 +12,156 @@ The current version supports 3 different checkboxes:
 
 3. Custom image checkbox
 
-![Screenshot](http://cl.ly/Un9I/Screen%20Shot%202014-04-03%20at%2011.04.17.png)
+![Screenshot](http://cl.ly/VB8f/tncheckboxgroup.png)
 
 Installation
 =============
 
-* Just drag the files in the checkie folder to your project.
-* Import the checkbox class you want to use
+##Manual
+* Just drag the files in the src folder to your project.
+* Import the checkbox class you want to use.
+
+##Cocoapods
+* Add ``` pod 'TNCheckBoxGroup' ``` to your Podfile.
+* Done.
 
 How to use
 ==========
 
-Import one of the checkbox classes
-* ``` TNCircleCheckBox ``` 
-* ``` TNSquareCheckBox ```
-* ``` TNImageCheckbox ```
+Import the ```TNCheckBoxGroup.h``` file.
 
-Initialize the class with its initializer and fill in all the arguments or use a config dictionary.
+Create data objects for every option in your checkbox group.  You can use the following data objects: ```TNCircularCheckBoxData```, ```TNRectangularCheckBoxData```, ```TNImageCheckBoxData```.
 
-Set the delegate ``` TNCheckBoxDelegate ``` if you want to be notified when the checkbox is or will be selected.
+Every data object extends ```TNCheckBoxData```, but has specific properties you can set.
 
-Add it to the view. You can use the ``` position ``` property to easily position the view.
+You can set the following properties on every data object:
+
+Property  | What does it do
+ ------------- | ------------- 
+ identifier    | Set a human readeble name for the checkbox
+ labelText    | Set the text for the label
+ checked    | Set the checked state
+ labelFont    | Set the font for the label
+ labelColor    | Set the color for the label
+
+The different classes have the following extra properties:
+
+### TNCircularCheckBoxData
+
+Arguments  | What does it do
+ ------------- | ------------- 
+ borderColor    | Set the border color for the outer circle
+ circleColor    | Set the color for the inner circle
+ borderRadius    | Set the radius for the outer circle
+ circleRadius    | Set the color for the inner circle
+
+Example
+ 
+    TNCircularCheckBoxData *bananaData = [[TNCircularCheckBoxData alloc] init];
+    bananaData.identifier = @"banana";
+    bananaData.labelText = @"Banana";
+    bananaData.checked = YES;
+    bananaData.borderColor = [UIColor blackColor];
+    bananaData.circleColor = [UIColor blackColor];
+    bananaData.borderRadius = 20;
+    bananaData.circleRadius = 15;
+ 
+### TNRectangularCheckBoxData
+
+Arguments  | What does it do
+ ------------- | ------------- 
+ borderColor    | Set the border color for the outer rectangle
+ rectangleColor    | Set the color for the inner rectangle
+ borderWidth    | Set the width for the outer rectangle
+ borderHeight    | Set the height for the outer rectangle
+ rectangleWidth    | Set the width for the inner rectangle
+ rectangleHeight    | Set the height for the inner rectangle
+ 
+Example
+
+    TNRectangularCheckBoxData *tennisData = [[TNRectangularCheckBoxData alloc] init];
+    tennisData.identifier = @"tennis";
+    tennisData.labelText = @"Tennis";
+    tennisData.borderColor = [UIColor grayColor];
+    tennisData.rectangleColor = [UIColor grayColor];
+    tennisData.borderWidth = tennisData.borderHeight = 20;
+    tennisData.rectangleWidth = tennisData.rectangleHeight = 15;
+
+### TNImageCheckBoxData
+
+Arguments  | What does it do
+ ------------- | ------------- 
+ selectedImage    | Set the image for the selected state
+ unselectedImage    | Set the image for the unselected state
+ 
+Example 
+
+    TNImageCheckBoxData *manData = [[TNImageCheckBoxData alloc] init];
+    manData.identifier = @"man";
+    manData.labelText = @"Man";
+    manData.checkedImage = [UIImage imageNamed:@"checked"];
+    manData.uncheckedImage = [UIImage imageNamed:@"unchecked"];
+
+When you have created the different data objects, you can create an instance of ```TNCheckBoxGroup``` and pass an array with the data objects and set the layout. The style can be horizontal or vertical.
+
+You can also set the margin between each item via the ``` marginBetweenItems ``` property. By default it's set to 15 pixels.
+
+If you want, you can also set the ``` identifier``` property to have a human readable name for the group.
+
+Call the ```create``` method and set the ```position``` property to place the group at a specific point.  Don't worry about the frame, this will be automatically calculated.
+And add the object to the view hierarchy.
+
+    self.myGroup = [[TNCheckBoxGroup alloc] initWithCheckBoxData:@[manData, womanData] style:TNCheckBoxLayoutVertical];
+    [self.myGroup create];
+    self.myGroup.position = CGPointMake(25, 25);
+    
+    [self addSubview:self.myGroup];
 
 Done!
 
-## TNCircleCheckBox
-![Circle check box](http://cl.ly/image/2L1P092b0D1L/circle.png)
+## Getting change notifications
+When the state of the checkbox group has changed, an _NSNotification_ is broadcasted.
 
-### Initializers
+You can listen to the ``` GROUP_CHANGED ``` message.
 
-    + (instancetype)checkBoxWithLabel:(NSString *)label tag:(NSUInteger)tag settings:(NSDictionary *)settings;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(myGroupGotUpdated:) name:GROUP_CHANGED object:self.myGroup];
     
-### Arguments
+## Getting list of checked checkboxes
+Every TNCheckBoxGroup instance has a property ``` checkedCheckBoxes ```, this will return an array with all checked checkboxes.
 
-Arguments  | What does it do
- ------------- | ------------- 
- label    | Set the text of the label
- tag    | Set the tag to identify the checkbox
- settings    | Set the color for the label
+## Getting list of unchecked checkboxes
+Every TNCheckBoxGroup instance has a property ``` uncheckedCheckBoxes ```, this will return an array with all unchecked checkboxes.
 
-The dictionary can have the following keys.
+## Styling checkboxes
+### Group-level
+If you want to provide the same label font and color for all checkboxes in a specific group, you can set the ``` labelFont ``` and ```labelColor ``` properties.
 
-Dictionary key constants  | What does it do
- ------------- | ------------- 
- kCheckBoxLabelFontSize    | Set the font size of the label    
- kCheckBoxLabelFont    | Set the font for the label
- kCheckBoxLabelColor    | Set the color for the label
- kCheckBoxInnerColor    | Set the color of the inner circle
- kCheckBoxOuterColor    | Set the color of the outer circle
- kCheckBoxInnerRadius    | Set the radius of the inner circle
- kCheckBoxOuterRadius    | Set the radius of the outer circle
-  kCheckBoxMarginBetweenCheckBoxAndLabel    | Set the distance between the checkbox and the label
-kCheckBoxMaximumWidthOfLabel    | Set the distance between the maximum width of the label
- 
-Or you can use the following static method.
+### Checkbox-level
+If you want to provide different label fonts and/or colors for specific checkboxes in a group, you can set the ``` labelFont ``` and ``` labelColor ``` properties on the TNCheckBox subclass.
 
-    + (instancetype)checkBoxWithLabel:(NSString *)label tag:(NSUInteger)tag checked:(BOOL)checked outerRadius:(NSUInteger)outerRadius outerRadiusColor:(UIColor *)outerRadiusColor innerRadius:(NSUInteger)innerRadius innerRadiusColor:(UIColor *)innerRadiusColor
+Creating custom checkboxes
+===========================
+If you want it is really easy to add your own custom checkboxes.
 
-### Arguments
+1. Create a data model class in which you store the specific data for your checkbox. This class needs to extend ``` TNCheckBoxData ```.
 
-Argument  | What does it do
- ------------- | ------------- 
- label    | Set the text label    
- tag    | Identify the checkbox
- checked    | State of the checkbox at creation
- outerRadius    | The radius of the outer circle
- outerRadiusColor    | The color of the outer circle
- innerRadius    | The radius of the inner circle
- innerRadiusColor    | The color of the inner circle
- 
-Or you can use a settings dictionary to initialize the class.
+2. Create a checkbox class which extends ``` TNCheckBox ```.
 
-## TNSquareCheckBox
-![Square check box](http://cl.ly/image/0M063l1A1N1e/square.png)
+3. Override the ``` setup ``` method (don't forget to call the super method at the end).
 
-### Initializers
+4. Override the ``` createCheckbox ``` method, here you can draw your custom checkbox.
 
-    + (instancetype)checkBoxWithLabel:(NSString *)label tag:(NSUInteger)tag settings:(NSDictionary *)settings;
-    
-### Arguments
+5. Override the ``` checkWithAnimation: ``` method to supply your own animations when the checkbox state changes.
 
-Arguments  | What does it do
- ------------- | ------------- 
- label    | Set the text of the label
- tag    | Set the tag to identify the checkbox
- settings    | Set the color for the label
+6. There is no step 6.
 
-The dictionary can have the following keys.
-
-Dictionary key constants  | What does it do
- ------------- | ------------- 
- kCheckBoxLabelFontSize    | Set the font size of the label    
- kCheckBoxLabelFont    | Set the font for the label
- kCheckBoxLabelColor    | Set the color for the label
- kCheckBoxInnerColor    | Set the color of the inner square
- kCheckBoxOuterColor    | Set the color of the outer square
- kCheckBoxInnerSquareSize    | Set the size of the inner square
- kCheckBoxOuterSquareSize    | Set the size of the outer square
-  kCheckBoxMarginBetweenCheckBoxAndLabel    | Set the distance between the checkbox and the label
-kCheckBoxMaximumWidthOfLabel    | Set the distance between the maximum width of the label
- 
-Or you can use the following static method.
-
-    + (instancetype)checkBoxWithLabel:(NSString *)label tag:(NSUInteger)tag checked:(BOOL)checked outerSquareSize:(CGSize)outerSquareSize outerSquareColor:(UIColor *)outerSquareColor innerSquareSize:(CGSize)innerSquareSize innerSquareColor:(UIColor *)innerSquareColor
-
-### Arguments
-
-Argument  | What does it do
- ------------- | ------------- 
- label    | Set the text label    
- tag    | Identify the checkbox
- checked    | State of the checkbox at creation
- outerSquareSize    | The size of the outer square
- outerSquareColor    | The color of the outer square
- innerSquareSize    | The size of the inner square
- innerSquareColor    | The color of the inner square
- 
-Or you can use a settings dictionary to initialize the class.
-
-## TNImageCheckbox
-![Custom image check box](http://cl.ly/image/0V1K0N363A0n/custom_image.png)
-### Initializers
-
-    + (instancetype)checkBoxWithLabel:(NSString *)label tag:(NSUInteger)tag settings:(NSDictionary *)settings;
-    
-### Arguments
-
-Arguments  | What does it do
- ------------- | ------------- 
- label    | Set the text of the label
- tag    | Set the tag to identify the checkbox
- settings    | Set the color for the label
-
-The dictionary can have the following keys.
-
-Dictionary key constants  | What does it do
- ------------- | ------------- 
- kCheckBoxLabelFontSize    | Set the font size of the label    
- kCheckBoxLabelFont    | Set the font for the label
- kCheckBoxLabelColor    | Set the color for the label
- kCheckBoxUncheckedImage    | Set the image for the unselected state
- kCheckBoxCheckedImage    | Set the image for the selected state
-  kCheckBoxMarginBetweenCheckBoxAndLabel    | Set the distance between the checkbox and the label
-kCheckBoxMaximumWidthOfLabel    | Set the distance between the maximum width of the label
- 
-Or you can use the following static method.
-
-    + (instancetype)checkBoxWithLabel:(NSString *)label tag:(NSUInteger)tag checked:(BOOL)checked uncheckedImage:(UIImage *)uncheckedImage checkedImage:(UIImage *)checkedImage
-
-### Arguments
-
-Argument  | What does it do
- ------------- | ------------- 
- label    | Set the text label    
- tag    | Identify the checkbox
- checked    | State of the checkbox at creation
- uncheckedImage    | The image for the unselected state
- checkedImage    | The image for the selected state
- 
-## TNCheckBoxDelegate
-There are two delegate methods you can implement to be notified when the state of the checkbox has been changed.  Using the tag property, you can identify which checkbox has been changed.
-
-1. ``` - (void)checkBox:(TNCheckBox *)checkBox willBeChecked:(BOOL)checked ```
-
-2. ``` - (void)checkBox:(TNCheckBox *)checkBox didCheck:(BOOL)checked ```
-
-Rolling out a custom checkbox
-=============================
-
-Rolling out a custom checkbox is really simple. 
-
-1. Create a new class and inherit from the TNCheckBox class.
-
-2. Create your custom initializer.
-
-3. Implement the ``` setup ``` method defined in TNCheckBoxProtocol.
-
-4. Implement the ``` createCheckbox ``` method defined in TNCheckBoxProtocol.  Call this method in the ``` setup ``` method.  In this method you draw your custom checkbox.
-
-5. At the end of the ``` setup ``` method call the ``` setup ``` method of the super class.
-
-6. Implement the ``` checkWithAnimation:(BOOL)animated ``` method defined in TNCheckBoxProtocol.  In this method you define your custom animation to be executed when the checkbox is tapped
-
-# Demo
+Demo
+====
 There is a demo project added to this repository, so you can see how it works.
 
-# License
-TNCheckBox published under the MIT license:
+License
+=======
+TNCheckBoxGroup published under the MIT license:
 
 Copyright (C) 2014, Frederik Jacques
 

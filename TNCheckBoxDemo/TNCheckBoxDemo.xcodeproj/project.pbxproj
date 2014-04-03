@@ -1,0 +1,620 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		86187C0C1909300500DB5B7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86187C0B1909300500DB5B7C /* Foundation.framework */; };
+		86187C0E1909300500DB5B7C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86187C0D1909300500DB5B7C /* CoreGraphics.framework */; };
+		86187C101909300500DB5B7C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86187C0F1909300500DB5B7C /* UIKit.framework */; };
+		86187C161909300500DB5B7C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 86187C141909300500DB5B7C /* InfoPlist.strings */; };
+		86187C181909300500DB5B7C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86187C171909300500DB5B7C /* main.m */; };
+		86187C1C1909300500DB5B7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86187C1B1909300500DB5B7C /* AppDelegate.m */; };
+		86187C1E1909300500DB5B7C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86187C1D1909300500DB5B7C /* Images.xcassets */; };
+		86187C251909300500DB5B7C /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86187C241909300500DB5B7C /* XCTest.framework */; };
+		86187C261909300500DB5B7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86187C0B1909300500DB5B7C /* Foundation.framework */; };
+		86187C271909300500DB5B7C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86187C0F1909300500DB5B7C /* UIKit.framework */; };
+		86187C2F1909300500DB5B7C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 86187C2D1909300500DB5B7C /* InfoPlist.strings */; };
+		86187C311909300500DB5B7C /* TNCheckBoxDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86187C301909300500DB5B7C /* TNCheckBoxDemoTests.m */; };
+		86187C461909301500DB5B7C /* TNCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 86187C3B1909301500DB5B7C /* TNCheckBox.m */; };
+		86187C481909301500DB5B7C /* TNCircularCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 86187C411909301500DB5B7C /* TNCircularCheckBox.m */; };
+		86187C491909301500DB5B7C /* TNImageCheckbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 86187C431909301500DB5B7C /* TNImageCheckbox.m */; };
+		86187C4A1909301500DB5B7C /* TNRectangularCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 86187C451909301500DB5B7C /* TNRectangularCheckBox.m */; };
+		86187C531909305F00DB5B7C /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86187C501909305F00DB5B7C /* MainView.m */; };
+		86187C541909305F00DB5B7C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86187C521909305F00DB5B7C /* MainViewController.m */; };
+		86BA541E1909550600E75362 /* TNCheckBoxGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BA541D1909550600E75362 /* TNCheckBoxGroup.m */; };
+		86BA54211909551300E75362 /* TNCheckBoxData.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BA54201909551300E75362 /* TNCheckBoxData.m */; };
+		86BA54241909551B00E75362 /* TNCircularCheckBoxData.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BA54231909551B00E75362 /* TNCircularCheckBoxData.m */; };
+		86BA54271909552B00E75362 /* TNRectangularCheckBoxData.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BA54261909552B00E75362 /* TNRectangularCheckBoxData.m */; };
+		86BA542A1909553500E75362 /* TNImageCheckBoxData.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BA54291909553500E75362 /* TNImageCheckBoxData.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		86187C281909300500DB5B7C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86187C001909300500DB5B7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86187C071909300500DB5B7C;
+			remoteInfo = TNCheckBoxDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		86187C081909300500DB5B7C /* TNCheckBoxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TNCheckBoxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		86187C0B1909300500DB5B7C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		86187C0D1909300500DB5B7C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		86187C0F1909300500DB5B7C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		86187C131909300500DB5B7C /* TNCheckBoxDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TNCheckBoxDemo-Info.plist"; sourceTree = "<group>"; };
+		86187C151909300500DB5B7C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		86187C171909300500DB5B7C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		86187C191909300500DB5B7C /* TNCheckBoxDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TNCheckBoxDemo-Prefix.pch"; sourceTree = "<group>"; };
+		86187C1A1909300500DB5B7C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		86187C1B1909300500DB5B7C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		86187C1D1909300500DB5B7C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		86187C231909300500DB5B7C /* TNCheckBoxDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TNCheckBoxDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		86187C241909300500DB5B7C /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		86187C2C1909300500DB5B7C /* TNCheckBoxDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TNCheckBoxDemoTests-Info.plist"; sourceTree = "<group>"; };
+		86187C2E1909300500DB5B7C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		86187C301909300500DB5B7C /* TNCheckBoxDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TNCheckBoxDemoTests.m; sourceTree = "<group>"; };
+		86187C3A1909301500DB5B7C /* TNCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNCheckBox.h; path = ../../src/TNCheckBox.h; sourceTree = "<group>"; };
+		86187C3B1909301500DB5B7C /* TNCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNCheckBox.m; path = ../../src/TNCheckBox.m; sourceTree = "<group>"; };
+		86187C3C1909301500DB5B7C /* TNCheckBoxDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNCheckBoxDelegate.h; path = ../../src/TNCheckBoxDelegate.h; sourceTree = "<group>"; };
+		86187C3D1909301500DB5B7C /* TNCheckBoxProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNCheckBoxProtocol.h; path = ../../src/TNCheckBoxProtocol.h; sourceTree = "<group>"; };
+		86187C401909301500DB5B7C /* TNCircularCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNCircularCheckBox.h; path = ../../src/TNCircularCheckBox.h; sourceTree = "<group>"; };
+		86187C411909301500DB5B7C /* TNCircularCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNCircularCheckBox.m; path = ../../src/TNCircularCheckBox.m; sourceTree = "<group>"; };
+		86187C421909301500DB5B7C /* TNImageCheckbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNImageCheckbox.h; path = ../../src/TNImageCheckbox.h; sourceTree = "<group>"; };
+		86187C431909301500DB5B7C /* TNImageCheckbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNImageCheckbox.m; path = ../../src/TNImageCheckbox.m; sourceTree = "<group>"; };
+		86187C441909301500DB5B7C /* TNRectangularCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNRectangularCheckBox.h; path = ../../src/TNRectangularCheckBox.h; sourceTree = "<group>"; };
+		86187C451909301500DB5B7C /* TNRectangularCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNRectangularCheckBox.m; path = ../../src/TNRectangularCheckBox.m; sourceTree = "<group>"; };
+		86187C4F1909305F00DB5B7C /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
+		86187C501909305F00DB5B7C /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainView.m; sourceTree = "<group>"; };
+		86187C511909305F00DB5B7C /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		86187C521909305F00DB5B7C /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		86BA541C1909550600E75362 /* TNCheckBoxGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNCheckBoxGroup.h; path = ../../src/TNCheckBoxGroup.h; sourceTree = "<group>"; };
+		86BA541D1909550600E75362 /* TNCheckBoxGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNCheckBoxGroup.m; path = ../../src/TNCheckBoxGroup.m; sourceTree = "<group>"; };
+		86BA541F1909551300E75362 /* TNCheckBoxData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNCheckBoxData.h; path = ../../src/TNCheckBoxData.h; sourceTree = "<group>"; };
+		86BA54201909551300E75362 /* TNCheckBoxData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNCheckBoxData.m; path = ../../src/TNCheckBoxData.m; sourceTree = "<group>"; };
+		86BA54221909551B00E75362 /* TNCircularCheckBoxData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNCircularCheckBoxData.h; path = ../../src/TNCircularCheckBoxData.h; sourceTree = "<group>"; };
+		86BA54231909551B00E75362 /* TNCircularCheckBoxData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNCircularCheckBoxData.m; path = ../../src/TNCircularCheckBoxData.m; sourceTree = "<group>"; };
+		86BA54251909552B00E75362 /* TNRectangularCheckBoxData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNRectangularCheckBoxData.h; path = ../../src/TNRectangularCheckBoxData.h; sourceTree = "<group>"; };
+		86BA54261909552B00E75362 /* TNRectangularCheckBoxData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNRectangularCheckBoxData.m; path = ../../src/TNRectangularCheckBoxData.m; sourceTree = "<group>"; };
+		86BA54281909553500E75362 /* TNImageCheckBoxData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNImageCheckBoxData.h; path = ../../src/TNImageCheckBoxData.h; sourceTree = "<group>"; };
+		86BA54291909553500E75362 /* TNImageCheckBoxData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNImageCheckBoxData.m; path = ../../src/TNImageCheckBoxData.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		86187C051909300500DB5B7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86187C0E1909300500DB5B7C /* CoreGraphics.framework in Frameworks */,
+				86187C101909300500DB5B7C /* UIKit.framework in Frameworks */,
+				86187C0C1909300500DB5B7C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86187C201909300500DB5B7C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86187C251909300500DB5B7C /* XCTest.framework in Frameworks */,
+				86187C271909300500DB5B7C /* UIKit.framework in Frameworks */,
+				86187C261909300500DB5B7C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		86187BFF1909300500DB5B7C = {
+			isa = PBXGroup;
+			children = (
+				86187C111909300500DB5B7C /* TNCheckBoxDemo */,
+				86187C2A1909300500DB5B7C /* TNCheckBoxDemoTests */,
+				86187C0A1909300500DB5B7C /* Frameworks */,
+				86187C091909300500DB5B7C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		86187C091909300500DB5B7C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86187C081909300500DB5B7C /* TNCheckBoxDemo.app */,
+				86187C231909300500DB5B7C /* TNCheckBoxDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86187C0A1909300500DB5B7C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				86187C0B1909300500DB5B7C /* Foundation.framework */,
+				86187C0D1909300500DB5B7C /* CoreGraphics.framework */,
+				86187C0F1909300500DB5B7C /* UIKit.framework */,
+				86187C241909300500DB5B7C /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		86187C111909300500DB5B7C /* TNCheckBoxDemo */ = {
+			isa = PBXGroup;
+			children = (
+				86187C1A1909300500DB5B7C /* AppDelegate.h */,
+				86187C1B1909300500DB5B7C /* AppDelegate.m */,
+				86187C551909309600DB5B7C /* View Controllers */,
+				86187C4B1909301700DB5B7C /* TNCheckBoxGroup */,
+				86187C1D1909300500DB5B7C /* Images.xcassets */,
+				86187C121909300500DB5B7C /* Supporting Files */,
+			);
+			path = TNCheckBoxDemo;
+			sourceTree = "<group>";
+		};
+		86187C121909300500DB5B7C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				86187C131909300500DB5B7C /* TNCheckBoxDemo-Info.plist */,
+				86187C141909300500DB5B7C /* InfoPlist.strings */,
+				86187C171909300500DB5B7C /* main.m */,
+				86187C191909300500DB5B7C /* TNCheckBoxDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		86187C2A1909300500DB5B7C /* TNCheckBoxDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				86187C301909300500DB5B7C /* TNCheckBoxDemoTests.m */,
+				86187C2B1909300500DB5B7C /* Supporting Files */,
+			);
+			path = TNCheckBoxDemoTests;
+			sourceTree = "<group>";
+		};
+		86187C2B1909300500DB5B7C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				86187C2C1909300500DB5B7C /* TNCheckBoxDemoTests-Info.plist */,
+				86187C2D1909300500DB5B7C /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		86187C4B1909301700DB5B7C /* TNCheckBoxGroup */ = {
+			isa = PBXGroup;
+			children = (
+				86BA541C1909550600E75362 /* TNCheckBoxGroup.h */,
+				86BA541D1909550600E75362 /* TNCheckBoxGroup.m */,
+				86187C4C1909302000DB5B7C /* Types */,
+			);
+			name = TNCheckBoxGroup;
+			sourceTree = "<group>";
+		};
+		86187C4C1909302000DB5B7C /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				86187C6C1909368600DB5B7C /* Base class */,
+				86187C661909350600DB5B7C /* Circular */,
+				86187C681909351200DB5B7C /* Rectangular */,
+				86187C671909350D00DB5B7C /* Image */,
+				86187C4E1909302A00DB5B7C /* Delegate */,
+			);
+			name = Types;
+			sourceTree = "<group>";
+		};
+		86187C4E1909302A00DB5B7C /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				86187C3C1909301500DB5B7C /* TNCheckBoxDelegate.h */,
+				86187C3D1909301500DB5B7C /* TNCheckBoxProtocol.h */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		86187C551909309600DB5B7C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				86187C511909305F00DB5B7C /* MainViewController.h */,
+				86187C521909305F00DB5B7C /* MainViewController.m */,
+				86187C4F1909305F00DB5B7C /* MainView.h */,
+				86187C501909305F00DB5B7C /* MainView.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		86187C561909312000DB5B7C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				86BA541F1909551300E75362 /* TNCheckBoxData.h */,
+				86BA54201909551300E75362 /* TNCheckBoxData.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		86187C661909350600DB5B7C /* Circular */ = {
+			isa = PBXGroup;
+			children = (
+				86187C69190935F000DB5B7C /* Data */,
+				86187C401909301500DB5B7C /* TNCircularCheckBox.h */,
+				86187C411909301500DB5B7C /* TNCircularCheckBox.m */,
+			);
+			name = Circular;
+			sourceTree = "<group>";
+		};
+		86187C671909350D00DB5B7C /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				86187C6B190935F700DB5B7C /* Data */,
+				86187C421909301500DB5B7C /* TNImageCheckbox.h */,
+				86187C431909301500DB5B7C /* TNImageCheckbox.m */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
+		86187C681909351200DB5B7C /* Rectangular */ = {
+			isa = PBXGroup;
+			children = (
+				86187C6A190935F300DB5B7C /* Data */,
+				86187C441909301500DB5B7C /* TNRectangularCheckBox.h */,
+				86187C451909301500DB5B7C /* TNRectangularCheckBox.m */,
+			);
+			name = Rectangular;
+			sourceTree = "<group>";
+		};
+		86187C69190935F000DB5B7C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				86BA54221909551B00E75362 /* TNCircularCheckBoxData.h */,
+				86BA54231909551B00E75362 /* TNCircularCheckBoxData.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		86187C6A190935F300DB5B7C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				86BA54251909552B00E75362 /* TNRectangularCheckBoxData.h */,
+				86BA54261909552B00E75362 /* TNRectangularCheckBoxData.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		86187C6B190935F700DB5B7C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				86BA54281909553500E75362 /* TNImageCheckBoxData.h */,
+				86BA54291909553500E75362 /* TNImageCheckBoxData.m */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		86187C6C1909368600DB5B7C /* Base class */ = {
+			isa = PBXGroup;
+			children = (
+				86187C561909312000DB5B7C /* Data */,
+				86187C3A1909301500DB5B7C /* TNCheckBox.h */,
+				86187C3B1909301500DB5B7C /* TNCheckBox.m */,
+			);
+			name = "Base class";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		86187C071909300500DB5B7C /* TNCheckBoxDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86187C341909300500DB5B7C /* Build configuration list for PBXNativeTarget "TNCheckBoxDemo" */;
+			buildPhases = (
+				86187C041909300500DB5B7C /* Sources */,
+				86187C051909300500DB5B7C /* Frameworks */,
+				86187C061909300500DB5B7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TNCheckBoxDemo;
+			productName = TNCheckBoxDemo;
+			productReference = 86187C081909300500DB5B7C /* TNCheckBoxDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		86187C221909300500DB5B7C /* TNCheckBoxDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86187C371909300500DB5B7C /* Build configuration list for PBXNativeTarget "TNCheckBoxDemoTests" */;
+			buildPhases = (
+				86187C1F1909300500DB5B7C /* Sources */,
+				86187C201909300500DB5B7C /* Frameworks */,
+				86187C211909300500DB5B7C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86187C291909300500DB5B7C /* PBXTargetDependency */,
+			);
+			name = TNCheckBoxDemoTests;
+			productName = TNCheckBoxDemoTests;
+			productReference = 86187C231909300500DB5B7C /* TNCheckBoxDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		86187C001909300500DB5B7C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Frederik Jacques";
+				TargetAttributes = {
+					86187C221909300500DB5B7C = {
+						TestTargetID = 86187C071909300500DB5B7C;
+					};
+				};
+			};
+			buildConfigurationList = 86187C031909300500DB5B7C /* Build configuration list for PBXProject "TNCheckBoxDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 86187BFF1909300500DB5B7C;
+			productRefGroup = 86187C091909300500DB5B7C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				86187C071909300500DB5B7C /* TNCheckBoxDemo */,
+				86187C221909300500DB5B7C /* TNCheckBoxDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		86187C061909300500DB5B7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86187C161909300500DB5B7C /* InfoPlist.strings in Resources */,
+				86187C1E1909300500DB5B7C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86187C211909300500DB5B7C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86187C2F1909300500DB5B7C /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		86187C041909300500DB5B7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86187C1C1909300500DB5B7C /* AppDelegate.m in Sources */,
+				86187C461909301500DB5B7C /* TNCheckBox.m in Sources */,
+				86187C4A1909301500DB5B7C /* TNRectangularCheckBox.m in Sources */,
+				86187C541909305F00DB5B7C /* MainViewController.m in Sources */,
+				86BA54211909551300E75362 /* TNCheckBoxData.m in Sources */,
+				86BA54271909552B00E75362 /* TNRectangularCheckBoxData.m in Sources */,
+				86BA542A1909553500E75362 /* TNImageCheckBoxData.m in Sources */,
+				86BA541E1909550600E75362 /* TNCheckBoxGroup.m in Sources */,
+				86187C181909300500DB5B7C /* main.m in Sources */,
+				86187C531909305F00DB5B7C /* MainView.m in Sources */,
+				86187C491909301500DB5B7C /* TNImageCheckbox.m in Sources */,
+				86187C481909301500DB5B7C /* TNCircularCheckBox.m in Sources */,
+				86BA54241909551B00E75362 /* TNCircularCheckBoxData.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86187C1F1909300500DB5B7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86187C311909300500DB5B7C /* TNCheckBoxDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		86187C291909300500DB5B7C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86187C071909300500DB5B7C /* TNCheckBoxDemo */;
+			targetProxy = 86187C281909300500DB5B7C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		86187C141909300500DB5B7C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86187C151909300500DB5B7C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		86187C2D1909300500DB5B7C /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86187C2E1909300500DB5B7C /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		86187C321909300500DB5B7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		86187C331909300500DB5B7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		86187C351909300500DB5B7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TNCheckBoxDemo/TNCheckBoxDemo-Prefix.pch";
+				INFOPLIST_FILE = "TNCheckBoxDemo/TNCheckBoxDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		86187C361909300500DB5B7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TNCheckBoxDemo/TNCheckBoxDemo-Prefix.pch";
+				INFOPLIST_FILE = "TNCheckBoxDemo/TNCheckBoxDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		86187C381909300500DB5B7C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TNCheckBoxDemo.app/TNCheckBoxDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TNCheckBoxDemo/TNCheckBoxDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "TNCheckBoxDemoTests/TNCheckBoxDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		86187C391909300500DB5B7C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/TNCheckBoxDemo.app/TNCheckBoxDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TNCheckBoxDemo/TNCheckBoxDemo-Prefix.pch";
+				INFOPLIST_FILE = "TNCheckBoxDemoTests/TNCheckBoxDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86187C031909300500DB5B7C /* Build configuration list for PBXProject "TNCheckBoxDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86187C321909300500DB5B7C /* Debug */,
+				86187C331909300500DB5B7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86187C341909300500DB5B7C /* Build configuration list for PBXNativeTarget "TNCheckBoxDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86187C351909300500DB5B7C /* Debug */,
+				86187C361909300500DB5B7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86187C371909300500DB5B7C /* Build configuration list for PBXNativeTarget "TNCheckBoxDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86187C381909300500DB5B7C /* Debug */,
+				86187C391909300500DB5B7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 86187C001909300500DB5B7C /* Project object */;
+}
