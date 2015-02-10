@@ -54,8 +54,16 @@
     cherryData.circleColor = [UIColor blackColor];
     cherryData.borderRadius = 20;
     cherryData.circleRadius = 15;
+
+    TNCircularCheckBoxData *orangeData = [[TNCircularCheckBoxData alloc] init];
+    orangeData.identifier = @"orange";
+    orangeData.labelText = @"Orange";
+    orangeData.borderColor = [UIColor blackColor];
+    orangeData.circleColor = [UIColor blackColor];
+    orangeData.borderRadius = 20;
+    orangeData.circleRadius = 15;
     
-    self.fruitGroup = [[TNCheckBoxGroup alloc] initWithCheckBoxData:@[bananaData, strawberryData, cherryData] style:TNCheckBoxLayoutHorizontal];
+    self.fruitGroup = [[TNCheckBoxGroup alloc] initWithCheckBoxData:@[bananaData, strawberryData, cherryData, orangeData] style:TNCheckBoxLayoutHorizontal];
     [self.fruitGroup create];
     self.fruitGroup.position = CGPointMake(25, 170);
     

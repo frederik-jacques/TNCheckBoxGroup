@@ -29,6 +29,7 @@ NSString *const GROUP_CHANGED = @"groupChanged";
         self.checkBoxData = checkBoxData;
         self.layout = layout;
         self.marginBetweenItems = 15;
+        self.rowItemCount = 3;
     }
     
     return self;
@@ -36,7 +37,6 @@ NSString *const GROUP_CHANGED = @"groupChanged";
 
 - (void)create {
     [self createCheckBoxes];
-    
     self.frame = CGRectMake(0, 0, self.widthOfComponent, self.heightOfComponent);
 }
 
@@ -44,6 +44,7 @@ NSString *const GROUP_CHANGED = @"groupChanged";
     
     int xPos = 0;
     int yPos = 0;
+    int maxWidth = 0;
     int maxHeight = 0;
     int i = 0;
     
@@ -69,9 +70,17 @@ NSString *const GROUP_CHANGED = @"groupChanged";
         checkBox.delegate = self;
         
         CGRect frame;
-        
+        long rows = (i + self.rowItemCount) / self.rowItemCount;
         if( self.layout == TNCheckBoxLayoutHorizontal ){
-            frame = CGRectMake(xPos, 0, checkBox.frame.size.width, checkBox.frame.size.height);
+//            frame = CGRectMake(xPos, 0, checkBox.frame.size.width, checkBox.frame.size.height);
+            if(i % self.rowItemCount == 0){
+                xPos = 0;
+            }else{
+                yPos -= checkBox.frame.size.height + self.marginBetweenItems;
+            }
+            frame = CGRectMake(xPos, yPos, checkBox.frame.size.width, checkBox.frame.size.height);
+            maxWidth = self.rowItemCount * (checkBox.frame.size.width + self.marginBetweenItems);
+            maxHeight = rows * (checkBox.frame.size.height + self.marginBetweenItems) + self.marginBetweenItems;
         }else{
             frame = CGRectMake(0, yPos, checkBox.frame.size.width, checkBox.frame.size.height);
         }
@@ -81,6 +90,7 @@ NSString *const GROUP_CHANGED = @"groupChanged";
         
         xPos += checkBox.frame.size.width + self.marginBetweenItems;
         yPos += checkBox.frame.size.height + self.marginBetweenItems;
+        maxWidth = MAX(maxWidth, checkBox.frame.size.width);
         maxHeight = MAX(maxHeight, checkBox.frame.size.height);
         
         if( self.layout == TNCheckBoxLayoutVertical ){
@@ -91,7 +101,7 @@ NSString *const GROUP_CHANGED = @"groupChanged";
         i++;
     }
     
-    self.widthOfComponent = xPos;
+    self.widthOfComponent = maxWidth;
     self.heightOfComponent = maxHeight;
     self.radioButtons = [NSArray arrayWithArray:tmp];
 }
