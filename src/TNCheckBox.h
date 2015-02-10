@@ -14,6 +14,7 @@
 #import "TNCircularCheckBoxData.h"
 #import "TNRectangularCheckBoxData.h"
 #import "TNImageCheckBoxData.h"
+#import "TNFillCheckBoxData.h"
 
 @interface TNCheckBox : UIView <TNCheckBoxProtocol>
 
@@ -22,7 +23,7 @@
 @property (nonatomic, strong) TNCheckBoxData *data;
 
 @property (nonatomic, strong) UIView *checkBox;
-@property (nonatomic, strong) UILabel *lblLabel;
+@property (nonatomic, strong) UIButton *lblButton;
 @property (nonatomic, strong) UIButton *btnHidden;
 @property (nonatomic) CGPoint position;
 

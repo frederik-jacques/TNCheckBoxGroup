@@ -36,27 +36,38 @@
     self.frame = self.btnHidden.frame;
 }
 
+- (void)updateLabel {
+    self.lblButton.backgroundColor = [UIColor clearColor];
+    self.lblButton.titleLabel.font = self.data.labelFont;
+    [self.lblButton setTitleColor:self.data.labelColor forState:UIControlStateNormal];
+    [self.lblButton setTitle:self.data.labelText forState:UIControlStateNormal];
+
+    if(self.data.labelBorderWidth){
+        self.lblButton.layer.masksToBounds = YES;
+        self.lblButton.layer.cornerRadius = self.data.labelBorderCornerRadius ?: 5.0;
+        self.lblButton.layer.borderWidth = self.data.labelBorderWidth ?: 1.0;
+        self.lblButton.layer.borderColor = self.data.labelBorderColor ?: [UIColor grayColor].CGColor;
+    }
+}
+
 - (void)createCheckbox {};
 
 - (void)createLabel {
-    
-    CGRect labelRect = [self.data.labelText boundingRectWithSize:CGSizeMake(150, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil];
-    
-    self.lblLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.checkBox.frame.origin.x + self.checkBox.frame.size.width + 15, (self.checkBox.frame.size.height - labelRect.size.height) / 2, labelRect.size.width, labelRect.size.height)];
-    self.lblLabel.numberOfLines = 0;
-    self.lblLabel.lineBreakMode = NSLineBreakByWordWrapping;
-    self.lblLabel.font = self.data.labelFont;
-    self.lblLabel.textColor = self.data.labelColor;
-    self.lblLabel.text = self.data.labelText;
-    [self addSubview:self.lblLabel];
+
+    CGRect labelRect = [self.data.labelText boundingRectWithSize:CGSizeMake(150, CGFLOAT_MAX) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:self.data.labelFont} context:nil];
+    CGSize labelSize = CGSizeMake(labelRect.size.width, labelRect.size.height);
+
+    self.lblButton = [[UIButton alloc] initWithFrame:CGRectMake(self.checkBox.frame.origin.x + self.checkBox.frame.size.width + self.data.labelMarginLeft, (self.checkBox.frame.size.height - labelSize.height) / 2, self.data.labelWidth ?: labelSize.width, self.data.labelHeight ?: labelSize.height)];
+    [self updateLabel];
+    [self addSubview:self.lblButton];
 }
 
 - (void)createHiddenButton {
     
-    int height = MAX(self.lblLabel.frame.size.height, self.checkBox.frame.size.height);
+    int height = MAX(self.lblButton.frame.size.height, self.checkBox.frame.size.height);
     
     self.btnHidden = [UIButton buttonWithType:UIButtonTypeCustom];
-    self.btnHidden.frame = CGRectMake(0, 0, self.lblLabel.frame.origin.x + self.lblLabel.frame.size.width, height);
+    self.btnHidden.frame = CGRectMake(0, 0, self.lblButton.frame.origin.x + self.lblButton.frame.size.width, height);
     [self addSubview:self.btnHidden];
     
     [self.btnHidden addTarget:self action:@selector(buttonTapped:) forControlEvents:UIControlEventTouchUpInside];

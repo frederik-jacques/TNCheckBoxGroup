@@ -21,7 +21,7 @@
 		86187C311909300500DB5B7C /* TNCheckBoxDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86187C301909300500DB5B7C /* TNCheckBoxDemoTests.m */; };
 		86187C461909301500DB5B7C /* TNCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 86187C3B1909301500DB5B7C /* TNCheckBox.m */; };
 		86187C481909301500DB5B7C /* TNCircularCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 86187C411909301500DB5B7C /* TNCircularCheckBox.m */; };
-		86187C491909301500DB5B7C /* TNImageCheckbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 86187C431909301500DB5B7C /* TNImageCheckbox.m */; };
+		86187C491909301500DB5B7C /* TNImageCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 86187C431909301500DB5B7C /* TNImageCheckBox.m */; };
 		86187C4A1909301500DB5B7C /* TNRectangularCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 86187C451909301500DB5B7C /* TNRectangularCheckBox.m */; };
 		86187C531909305F00DB5B7C /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86187C501909305F00DB5B7C /* MainView.m */; };
 		86187C541909305F00DB5B7C /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86187C521909305F00DB5B7C /* MainViewController.m */; };
@@ -30,6 +30,8 @@
 		86BA54241909551B00E75362 /* TNCircularCheckBoxData.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BA54231909551B00E75362 /* TNCircularCheckBoxData.m */; };
 		86BA54271909552B00E75362 /* TNRectangularCheckBoxData.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BA54261909552B00E75362 /* TNRectangularCheckBoxData.m */; };
 		86BA542A1909553500E75362 /* TNImageCheckBoxData.m in Sources */ = {isa = PBXBuildFile; fileRef = 86BA54291909553500E75362 /* TNImageCheckBoxData.m */; };
+		C8F10AAD1A89E460008391F1 /* TNFillCheckBoxData.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F10AAC1A89E460008391F1 /* TNFillCheckBoxData.m */; };
+		C8F10AB31A89E4A3008391F1 /* TNFillCheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = C8F10AB21A89E4A3008391F1 /* TNFillCheckBox.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +67,8 @@
 		86187C3D1909301500DB5B7C /* TNCheckBoxProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNCheckBoxProtocol.h; path = ../../src/TNCheckBoxProtocol.h; sourceTree = "<group>"; };
 		86187C401909301500DB5B7C /* TNCircularCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNCircularCheckBox.h; path = ../../src/TNCircularCheckBox.h; sourceTree = "<group>"; };
 		86187C411909301500DB5B7C /* TNCircularCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNCircularCheckBox.m; path = ../../src/TNCircularCheckBox.m; sourceTree = "<group>"; };
-		86187C421909301500DB5B7C /* TNImageCheckbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNImageCheckbox.h; path = ../../src/TNImageCheckbox.h; sourceTree = "<group>"; };
-		86187C431909301500DB5B7C /* TNImageCheckbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNImageCheckbox.m; path = ../../src/TNImageCheckbox.m; sourceTree = "<group>"; };
+		86187C421909301500DB5B7C /* TNImageCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNImageCheckBox.h; path = ../../src/TNImageCheckBox.h; sourceTree = "<group>"; };
+		86187C431909301500DB5B7C /* TNImageCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNImageCheckBox.m; path = ../../src/TNImageCheckBox.m; sourceTree = "<group>"; };
 		86187C441909301500DB5B7C /* TNRectangularCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNRectangularCheckBox.h; path = ../../src/TNRectangularCheckBox.h; sourceTree = "<group>"; };
 		86187C451909301500DB5B7C /* TNRectangularCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNRectangularCheckBox.m; path = ../../src/TNRectangularCheckBox.m; sourceTree = "<group>"; };
 		86187C4F1909305F00DB5B7C /* MainView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainView.h; sourceTree = "<group>"; };
@@ -83,6 +85,10 @@
 		86BA54261909552B00E75362 /* TNRectangularCheckBoxData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNRectangularCheckBoxData.m; path = ../../src/TNRectangularCheckBoxData.m; sourceTree = "<group>"; };
 		86BA54281909553500E75362 /* TNImageCheckBoxData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNImageCheckBoxData.h; path = ../../src/TNImageCheckBoxData.h; sourceTree = "<group>"; };
 		86BA54291909553500E75362 /* TNImageCheckBoxData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNImageCheckBoxData.m; path = ../../src/TNImageCheckBoxData.m; sourceTree = "<group>"; };
+		C8F10AAB1A89E460008391F1 /* TNFillCheckBoxData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNFillCheckBoxData.h; path = ../../src/TNFillCheckBoxData.h; sourceTree = "<group>"; };
+		C8F10AAC1A89E460008391F1 /* TNFillCheckBoxData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNFillCheckBoxData.m; path = ../../src/TNFillCheckBoxData.m; sourceTree = "<group>"; };
+		C8F10AB11A89E4A3008391F1 /* TNFillCheckBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TNFillCheckBox.h; path = ../../src/TNFillCheckBox.h; sourceTree = "<group>"; };
+		C8F10AB21A89E4A3008391F1 /* TNFillCheckBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TNFillCheckBox.m; path = ../../src/TNFillCheckBox.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,7 +200,8 @@
 		86187C4C1909302000DB5B7C /* Types */ = {
 			isa = PBXGroup;
 			children = (
-				86187C6C1909368600DB5B7C /* Base class */,
+				C8F10AA91A89E3F3008391F1 /* Fill */,
+				86187C6C1909368600DB5B7C /* Base */,
 				86187C661909350600DB5B7C /* Circular */,
 				86187C681909351200DB5B7C /* Rectangular */,
 				86187C671909350D00DB5B7C /* Image */,
@@ -246,8 +253,8 @@
 			isa = PBXGroup;
 			children = (
 				86187C6B190935F700DB5B7C /* Data */,
-				86187C421909301500DB5B7C /* TNImageCheckbox.h */,
-				86187C431909301500DB5B7C /* TNImageCheckbox.m */,
+				86187C421909301500DB5B7C /* TNImageCheckBox.h */,
+				86187C431909301500DB5B7C /* TNImageCheckBox.m */,
 			);
 			name = Image;
 			sourceTree = "<group>";
@@ -289,14 +296,33 @@
 			name = Data;
 			sourceTree = "<group>";
 		};
-		86187C6C1909368600DB5B7C /* Base class */ = {
+		86187C6C1909368600DB5B7C /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				86187C561909312000DB5B7C /* Data */,
 				86187C3A1909301500DB5B7C /* TNCheckBox.h */,
 				86187C3B1909301500DB5B7C /* TNCheckBox.m */,
 			);
-			name = "Base class";
+			name = Base;
+			sourceTree = "<group>";
+		};
+		C8F10AA91A89E3F3008391F1 /* Fill */ = {
+			isa = PBXGroup;
+			children = (
+				C8F10AAA1A89E3F9008391F1 /* Data */,
+				C8F10AB11A89E4A3008391F1 /* TNFillCheckBox.h */,
+				C8F10AB21A89E4A3008391F1 /* TNFillCheckBox.m */,
+			);
+			name = Fill;
+			sourceTree = "<group>";
+		};
+		C8F10AAA1A89E3F9008391F1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C8F10AAB1A89E460008391F1 /* TNFillCheckBoxData.h */,
+				C8F10AAC1A89E460008391F1 /* TNFillCheckBoxData.m */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -397,14 +423,16 @@
 				86187C1C1909300500DB5B7C /* AppDelegate.m in Sources */,
 				86187C461909301500DB5B7C /* TNCheckBox.m in Sources */,
 				86187C4A1909301500DB5B7C /* TNRectangularCheckBox.m in Sources */,
+				C8F10AAD1A89E460008391F1 /* TNFillCheckBoxData.m in Sources */,
 				86187C541909305F00DB5B7C /* MainViewController.m in Sources */,
 				86BA54211909551300E75362 /* TNCheckBoxData.m in Sources */,
 				86BA54271909552B00E75362 /* TNRectangularCheckBoxData.m in Sources */,
+				C8F10AB31A89E4A3008391F1 /* TNFillCheckBox.m in Sources */,
 				86BA542A1909553500E75362 /* TNImageCheckBoxData.m in Sources */,
 				86BA541E1909550600E75362 /* TNCheckBoxGroup.m in Sources */,
 				86187C181909300500DB5B7C /* main.m in Sources */,
 				86187C531909305F00DB5B7C /* MainView.m in Sources */,
-				86187C491909301500DB5B7C /* TNImageCheckbox.m in Sources */,
+				86187C491909301500DB5B7C /* TNImageCheckBox.m in Sources */,
 				86187C481909301500DB5B7C /* TNCircularCheckBox.m in Sources */,
 				86BA54241909551B00E75362 /* TNCircularCheckBoxData.m in Sources */,
 			);
@@ -526,6 +554,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TNCheckBoxDemo/TNCheckBoxDemo-Prefix.pch";
 				INFOPLIST_FILE = "TNCheckBoxDemo/TNCheckBoxDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -539,6 +568,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TNCheckBoxDemo/TNCheckBoxDemo-Prefix.pch";
 				INFOPLIST_FILE = "TNCheckBoxDemo/TNCheckBoxDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

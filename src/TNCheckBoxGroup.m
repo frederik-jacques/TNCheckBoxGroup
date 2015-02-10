@@ -48,8 +48,6 @@ NSString *const GROUP_CHANGED = @"groupChanged";
     int maxHeight = 0;
     int i = 0;
     
-    NSMutableArray *tmp = [NSMutableArray new];
-    
     for (TNCheckBoxData *data in self.checkBoxData) {
         
         TNCheckBox *checkBox = nil;
@@ -62,7 +60,9 @@ NSString *const GROUP_CHANGED = @"groupChanged";
         }else if( [data isKindOfClass:[TNRectangularCheckBoxData class]] ){
             checkBox = [[TNRectangularCheckBox alloc] initWithData:(TNRectangularCheckBoxData *)data];
         }else if( [data isKindOfClass:[TNImageCheckBoxData class]] ){
-            checkBox = [[TNImageCheckbox alloc] initWithData:(TNImageCheckBoxData *)data];
+            checkBox = [[TNImageCheckBox alloc] initWithData:(TNImageCheckBoxData *)data];
+        }else {
+            checkBox = [[TNFillCheckBox alloc] initWithData:(TNFillCheckBoxData *)data];
         }
         
         data.tag = i;
@@ -72,7 +72,6 @@ NSString *const GROUP_CHANGED = @"groupChanged";
         CGRect frame;
         long rows = (i + self.rowItemCount) / self.rowItemCount;
         if( self.layout == TNCheckBoxLayoutHorizontal ){
-//            frame = CGRectMake(xPos, 0, checkBox.frame.size.width, checkBox.frame.size.height);
             if(i % self.rowItemCount == 0){
                 xPos = 0;
             }else{
@@ -97,13 +96,11 @@ NSString *const GROUP_CHANGED = @"groupChanged";
             maxHeight = yPos;
         }
     
-        [tmp addObject:checkBox];
         i++;
     }
     
     self.widthOfComponent = maxWidth;
     self.heightOfComponent = maxHeight;
-    self.radioButtons = [NSArray arrayWithArray:tmp];
 }
 
 - (void)checkBoxDidChange:(TNCheckBox *)checkbox {

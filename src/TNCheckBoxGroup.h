@@ -10,7 +10,8 @@
 #import "TNCheckBox.h"
 #import "TNCircularCheckBox.h"
 #import "TNRectangularCheckBox.h"
-#import "TNImageCheckbox.h"
+#import "TNImageCheckBox.h"
+#import "TNFillCheckBox.h"
 
 extern NSString *const GROUP_CHANGED;
 
@@ -31,8 +32,6 @@ typedef enum : NSUInteger {
 
 @property (nonatomic, readonly) NSArray *checkedCheckBoxes;
 @property (nonatomic, readonly) NSArray *uncheckedCheckBoxes;
-
-@property (nonatomic, strong) NSArray *radioButtons;
 
 - (instancetype)initWithCheckBoxData:(NSArray *)checkBoxData style:(TNCheckBoxLayout)layout;
 - (void)create;
