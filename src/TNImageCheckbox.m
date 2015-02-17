@@ -1,20 +1,20 @@
 //
-//  TNImageCheckbox.m
+//  TNImageCheckBox.m
 //  TNCheckBox
 //
 //  Created by Frederik Jacques on 02/04/14.
 //  Copyright (c) 2014 Frederik Jacques. All rights reserved.
 //
 
-#import "TNImageCheckbox.h"
+#import "TNImageCheckBox.h"
 
-@interface TNImageCheckbox()
+@interface TNImageCheckBox ()
 
 @property (nonatomic, strong) UIImageView *imageView;
 
 @end
 
-@implementation TNImageCheckbox
+@implementation TNImageCheckBox
 
 #pragma mark - Initializers
 

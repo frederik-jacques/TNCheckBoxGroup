@@ -16,5 +16,6 @@
 @property (nonatomic, strong) TNCheckBoxGroup *fruitGroup;
 @property (nonatomic, strong) TNCheckBoxGroup *sportsGroup;
 @property (nonatomic, strong) TNCheckBoxGroup *loveGroup;
+@property (nonatomic, strong) TNCheckBoxGroup *noGroup;
 
 @end

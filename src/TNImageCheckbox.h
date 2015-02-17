@@ -1,5 +1,5 @@
 //
-//  TNImageCheckbox.h
+//  TNImageCheckBox.h
 //  TNCheckBox
 //
 //  Created by Frederik Jacques on 02/04/14.
@@ -8,7 +8,7 @@
 
 #import "TNCheckBox.h"
 
-@interface TNImageCheckbox : TNCheckBox
+@interface TNImageCheckBox : TNCheckBox
 
 @property (nonatomic, strong) TNImageCheckBoxData *data;
 
