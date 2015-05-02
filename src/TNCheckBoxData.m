@@ -10,6 +10,32 @@
 
 @implementation TNCheckBoxData
 
+#pragma mark - Copying
+- (id)copyWithZone:(NSZone *)zone
+{
+    TNCheckBoxData *copy = [[[self class] allocWithZone:zone] init];
+    
+    if (copy) {
+        copy.identifier = self.identifier;
+        copy.tag = self.tag;
+        copy.checked = self.checked;
+        
+        copy.labelText = self.labelText;
+        copy.labelFont = self.labelFont;
+        copy.labelColor = self.labelColor;
+        
+        copy.labelMarginLeft = self.labelMarginLeft;
+        copy.labelWidth = self.labelWidth;
+        copy.labelHeight = self.labelHeight;
+        
+        copy.labelBorderWidth = self.labelBorderWidth;
+        copy.labelBorderCornerRadius = self.labelBorderCornerRadius;
+        copy.labelBorderColor = self.labelBorderColor;
+    }
+    
+    return copy;
+}
+
 #pragma mark - Debug
 - (NSString *)description {
     return [NSString stringWithFormat:@"[TNCheckBoxData] Identifier: %@ - Tag: %i - Checked: %d", self.identifier, self.tag, self.checked];

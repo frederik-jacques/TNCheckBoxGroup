@@ -10,6 +10,24 @@
 
 @implementation TNRectangularCheckBoxData
 
+#pragma mark - Copying
+- (id)copyWithZone:(NSZone *)zone
+{
+    TNRectangularCheckBoxData *copy = [super copyWithZone:zone];
+    
+    if (copy) {
+        copy.borderColor = self.borderColor;
+        copy.rectangleColor = self.rectangleColor;
+        
+        copy.borderWidth = self.borderWidth;
+        copy.borderHeight = self.borderHeight;
+        copy.rectangleWidth = self.rectangleWidth;
+        copy.rectangleHeight = self.rectangleHeight;
+    }
+    
+    return copy;
+}
+
 #pragma mark - Getters and setters
 - (UIColor *)borderColor {
     

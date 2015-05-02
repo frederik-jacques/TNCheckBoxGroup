@@ -10,6 +10,22 @@
 
 @implementation TNCircularCheckBoxData
 
+#pragma mark - Copying
+- (id)copyWithZone:(NSZone *)zone
+{
+    TNCircularCheckBoxData *copy = [super copyWithZone:zone];
+    
+    if (copy) {
+        copy.borderColor = self.borderColor;
+        copy.circleColor = self.circleColor;
+        
+        copy.borderRadius = self.borderRadius;
+        copy.circleRadius = self.circleRadius;
+    }
+    
+    return copy;
+}
+
 #pragma mark - Getters and setters
 - (UIColor *)borderColor {
     
