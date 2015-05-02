@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TNCheckBoxData : NSObject
+@interface TNCheckBoxData : NSObject <NSCopying>
 
 @property (nonatomic, copy) NSString *identifier;
 @property (nonatomic) NSInteger tag;

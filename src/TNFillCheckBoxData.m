@@ -10,4 +10,17 @@
 
 @implementation TNFillCheckBoxData
 
+#pragma mark - Copying
+- (id)copyWithZone:(NSZone *)zone
+{
+    TNFillCheckBoxData *copy = [super copyWithZone:zone];
+    
+    if (copy) {
+        copy.labelBgNormalColor = self.labelBgNormalColor;
+        copy.labelBgSelectedColor = self.labelBgSelectedColor;
+    }
+    
+    return copy;
+}
+
 @end
