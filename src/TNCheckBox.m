@@ -58,6 +58,7 @@
     CGSize labelSize = CGSizeMake(labelRect.size.width, labelRect.size.height);
 
     self.lblButton = [[UIButton alloc] initWithFrame:CGRectMake(self.checkBox.frame.origin.x + self.checkBox.frame.size.width + self.data.labelMarginLeft, (self.checkBox.frame.size.height - labelSize.height) / 2, self.data.labelWidth ?: labelSize.width, self.data.labelHeight ?: labelSize.height)];
+    self.lblButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [self updateLabel];
     [self addSubview:self.lblButton];
 }
