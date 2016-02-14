@@ -1,7 +1,7 @@
 Custom checkboxes for Objective-C
 =========================
 
-U can use the TNCheckBoxGroup class to use some pre-built checkboxes, or you can extend it really easy to suit your own design.
+You can use the TNCheckBoxGroup class to use some pre-built checkboxes, or you can extend it really easy to suit your own design.
 Every checkbox has a selected animation.  When the text is longer then the available space, it will automatically wrap the text over multiple lines.
 
 The current version supports 3 different checkboxes:
