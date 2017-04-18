@@ -17,11 +17,11 @@ The current version supports 3 different checkboxes:
 Installation
 =============
 
-##Manual
+## Manual
 * Just drag the files in the src folder to your project.
 * Import the checkbox class you want to use.
 
-##Cocoapods
+## Cocoapods
 * Add ``` pod 'TNCheckBoxGroup' ``` to your Podfile.
 * Done.
 
